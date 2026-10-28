@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap');
+
+:root {
+    --navy: #0b2545;
+    --teal: #087e8b;
+    --light: #f4f7fa;
+    --white: #ffffff;
+    --gold: #ffcc70;
+    --text: #222222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    background: var(--light);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--navy);
+    color: var(--white);
+}
+
+#course-title {
+    display: block;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--teal);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--navy);
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin: 0;
+    padding: 0.75rem;
+    text-align: center;
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto 1rem;
+    border-radius: 4px;
+}
+
+footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.5rem;
+}
+
+@media screen and (max-width: 650px) {
+    #course-title {
+        font-size: 1.15rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
