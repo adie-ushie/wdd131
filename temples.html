@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a collection of temple photographs for WDD 131 Dynamic Web Fundamentals.">
+    <meta name="author" content="Adie G. Ushie">
+
+    <title>Temple Album | WDD 131 | Adie G. Ushie</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <span id="course-title">Temple Album</span>
+
+            <button id="menu-button"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navigation">
+                <span class="menu-icon" aria-hidden="true">☰</span>
+            </button>
+
+            <nav id="navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="#old">Old</a>
+                <a href="#new">New</a>
+                <a href="#large">Large</a>
+                <a href="#small">Small</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Temple Album</h1>
+
+        <section class="temple-grid" aria-label="Temple album photographs">
+            <figure id="old">
+                <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple" width="600" height="400" fetchpriority="high">
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+
+            <figure id="new">
+                <img src="images/rome-italy-temple.jpg" alt="Rome Italy Temple" width="600" height="400" loading="lazy">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+
+            <figure id="large">
+                <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple" width="600" height="400" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/washington-dc-temple.jpg" alt="Washington D.C. Temple" width="600" height="400" loading="lazy">
+                <figcaption>Washington D.C. Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/london-england-temple.jpg" alt="London England Temple" width="600" height="400" loading="lazy">
+                <figcaption>London England Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple" width="600" height="400" loading="lazy">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/paris-france-temple.jpg" alt="Paris France Temple" width="600" height="400" loading="lazy">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/tokyo-japan-temple.jpg" alt="Tokyo Japan Temple" width="600" height="400" loading="lazy">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+
+            <figure id="small">
+                <img src="images/hong-kong-china-temple.jpg" alt="Hong Kong China Temple" width="600" height="400" loading="lazy">
+                <figcaption>Hong Kong China Temple</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Adie G. Ushie | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
