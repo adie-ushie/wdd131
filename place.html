@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Calabar, Nigeria, its location, culture, climate, and beautiful attractions.">
+    <meta name="author" content="Adie G. Ushie">
+    <title>Calabar, Nigeria | WDD 131</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Calabar, Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source
+                    srcset="images/calabar-large.webp"
+                    media="(min-width: 1000px)">
+                <source
+                    srcset="images/calabar-medium.webp"
+                    media="(min-width: 600px)">
+                <img
+                    src="images/calabar-small.webp"
+                    alt="A beautiful view of Calabar, Nigeria"
+                    width="500"
+                    height="250">
+            </picture>
+        </div>
+
+        <section class="data">
+            <h2>Data</h2>
+            <div class="info">
+                <p><strong>Country:</strong> Nigeria</p>
+                <p><strong>Location:</strong> West Africa</p>
+                <p><strong>Capital:</strong> Abuja</p>
+                <p><strong>State:</strong> Cross River State</p>
+                <p><strong>Language:</strong> English</p>
+                <p><strong>Currency:</strong> Nigerian Naira (₦)</p>
+                <p><strong>Climate:</strong> Tropical</p>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+
+            <img
+                class="weather-icon"
+                src="images/weather.svg"
+                alt="Partly cloudy weather icon"
+                width="80"
+                height="80">
+
+            <div class="info">
+                <p><strong>Condition:</strong> Partly Cloudy</p>
+                <p><strong>Temperature:</strong> <span id="temperature">29</span> °C</p>
+                <p><strong>Wind Speed:</strong> <span id="wind-speed">12</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> | Adie G. Ushie |
+            Calabar, Nigeria
+        </p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
