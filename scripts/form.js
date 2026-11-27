@@ -26,16 +26,40 @@ const products = [
     }
 ];
 
+// Dynamically populate the product selection field.
 const productSelect = document.querySelector("#productName");
 
-products.forEach((product) => {
-    const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
-    productSelect.appendChild(option);
-});
+if (productSelect) {
+    products.forEach((product) => {
+        const option = document.createElement("option");
+        option.value = product.id;
+        option.textContent = product.name;
+        productSelect.appendChild(option);
+    });
+}
 
-// Update the footer year and last modified date.
+// Count completed reviews on the confirmation page.
+const reviewCountElement = document.querySelector("#reviewCount");
+
+if (reviewCountElement) {
+    const submittedData = new URLSearchParams(window.location.search);
+
+    if (
+        submittedData.has("productName") &&
+        submittedData.has("rating") &&
+        submittedData.has("installationDate")
+    ) {
+        let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
+
+        reviewCount++;
+
+        localStorage.setItem("reviewCount", reviewCount);
+
+        reviewCountElement.textContent = reviewCount;
+    }
+}
+
+// Footer information.
 const currentYear = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified");
 
@@ -44,5 +68,5 @@ if (currentYear) {
 }
 
 if (lastModified) {
-    lastModified.textContent = Last Modification: ${document.lastModified};
+    lastModified.textContent = `Last Modification: ${document.lastModified}`;
 }

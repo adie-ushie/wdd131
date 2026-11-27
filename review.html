@@ -17,8 +17,11 @@
     <main>
         <section class="confirmation">
             <h2>Your Review Has Been Submitted</h2>
+
             <p>Thank you for taking the time to share your product experience.</p>
+
             <p>You have completed <strong id="reviewCount">0</strong> product reviews.</p>
+
             <p><a href="form.html">Submit Another Review</a></p>
         </section>
     </main>
@@ -28,13 +31,5 @@
         <p>WDD 131 - Dynamic Web Fundamentals</p>
         <p id="lastModified"></p>
     </footer>
-
-    <script>
-        let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
-        reviewCount++;
-        localStorage.setItem("reviewCount", reviewCount);
-
-        document.querySelector("#reviewCount").textContent = reviewCount;
-    </script>
 </body>
 </html>
